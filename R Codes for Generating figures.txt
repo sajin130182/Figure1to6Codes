@@ -1,0 +1,72 @@
+# R Codes for Generating figures
+###################################################################
+
+
+################### Same A levels missing
+
+rm(list = ls())
+shell("cls")
+
+# Figure 1
+par(mfrow = c(1, 2))
+plot(sametreat.num.mat[, 3], col = "darkorange", pch = 16, ylim = c(90, 99),xlab = "Run Number",ylab="X1 Value", main = "(a)")
+points(sametreat.num.mat[, 1], col = "deepskyblue",pch = 8)
+legend(x= "topright", bty = "n", legend = c("X1 Estimate","X1 Initial Value"),col=c("darkorange","deepskyblue"),pch = c(16,8),text.col = c("darkorange","deepskyblue"))
+grid()
+
+plot(sametreat.num.mat[, 4], col = "darkorange", pch = 16, ylim = c(90, 99),xlab = "Run Number",ylab="X2 Value", main = "(b)")
+points(sametreat.num.mat[, 2], col = "deepskyblue",pch = 8)
+legend(x= "topright", bty = "n", legend = c("X2 Estimate","X2 Initial Value"),col=c("darkorange","deepskyblue"),pch = c(16,8),text.col = c("darkorange","deepskyblue"))
+grid()
+par(mfrow = c(1, 1))
+
+# Figure 2
+plot(sametreat.num.mat[,5],col="deepskyblue",pch=16,ylim=c(94500,95500),xlab="Run Number",ylab="SSE")
+legend(x="topright",bty = "n",legend = "SSE",pch=16,col="deepskyblue",text.col = "deepskyblue")
+grid()
+
+################# Same B levels missing
+
+rm(list = ls())
+shell("cls")
+
+# Figure 3
+par(mfrow = c(1, 2))
+plot(sameblock.num.mat[, 3], col = "darkorange", pch = 16, ylim = c(84, 98),xlab = "Run Number",ylab="X1 Value", main = "(a)")
+points(sameblock.num.mat[, 1], col = "deepskyblue",pch = 8)
+legend(x= "topright", bty = "n", legend = c("X1 Estimate","X1 Initial Value"),col=c("darkorange","deepskyblue"),pch = c(16,8),text.col = c("darkorange","deepskyblue"))
+grid()
+
+plot(sameblock.num.mat[, 4], col = "darkorange", pch = 16, ylim = c(84, 98),xlab = "Run Number",ylab="X2 Value", main = "(b)")
+points(sameblock.num.mat[, 2], col = "deepskyblue",pch = 8)
+legend(x= "topright", bty = "n", legend = c("X2 Estimate","X2 Initial Value"),col=c("darkorange","deepskyblue"),pch = c(16,8),text.col = c("darkorange","deepskyblue"))
+grid()
+par(mfrow = c(1, 1))
+
+# Figure 4
+plot(sameblock.num.mat[,5],col="deepskyblue",pch=16,ylim=c(77000,77500),xlab="Run Number",ylab="SSE")
+legend(x="topright",bty = "n",legend = "SSE",pch=16,col="deepskyblue",text.col = "deepskyblue")
+grid()
+
+####################### Different A and B levels missing
+
+rm(list = ls())
+shell("cls")
+
+# Figure 5
+par(mfrow = c(1, 2))
+plot(different.num.mat[, 3], col = "darkorange", pch = 16, ylim = c(87, 97),xlab = "Run Number",ylab="X1 Value", main = "(a)")
+points(different.num.mat[, 1], col = "deepskyblue",pch = 8)
+legend(x= "topright", bty = "n", legend = c("X1 Estimate","X1 Initial Value"),col=c("darkorange","deepskyblue"),pch = c(16,8),text.col = c("darkorange","deepskyblue"))
+grid()
+
+plot(different.num.mat[, 4], col = "darkorange", pch = 16, ylim = c(87, 97),xlab = "Run Number",ylab="X2 Value", main = "(b)")
+points(different.num.mat[, 2], col = "deepskyblue",pch = 8)
+legend(x= "topright", bty = "n", legend = c("X2 Estimate","X2 Initial Value"),col=c("darkorange","deepskyblue"),pch = c(16,8),text.col = c("darkorange","deepskyblue"))
+grid()
+par(mfrow = c(1, 1))
+
+# Figure 6
+plot(different.num.mat[,5],col="deepskyblue",pch=16,ylim=c(44500,44600),xlab="Run Number",ylab="SSE")
+legend(x="topright",bty = "n",legend = "SSE",pch=16,col="deepskyblue",text.col = "deepskyblue")
+grid()
